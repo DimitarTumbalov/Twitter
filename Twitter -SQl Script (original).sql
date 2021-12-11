@@ -284,10 +284,12 @@ create table FactUsers(
 	sign_up_id int null foreign key references DimSignUp(id),
 	last_sign_in_id int null foreign key references DimLastSignIn(id),
 	birth_date_id int null foreign key references DimBirthDate(id),
-	followers_count int not null,
 	following_count int not null,
+	followers_count int not null,
 	bookmarks_count int not null,
 	lists_count int not null,
+	updated_at datetime not null,
+	operation char(3) not null
 );
 
 go
